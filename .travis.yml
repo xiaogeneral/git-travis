@@ -11,7 +11,7 @@ env:
     secure: 15222852af1b
 after_success:
 - chmod 600 ~/.ssh/id_rsa
-- ssh xiaogeneral@39.106.211.6 -o StrictHostKeyChecking=no 'cd ~/git-travis && git pull'
+- ssh travis@39.106.211.6 -o StrictHostKeyChecking=no 'cd ~/git-travis && git pull'
 addons:
   ssh_known_hosts: 39.106.211.6
 before_install:
