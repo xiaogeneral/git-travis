@@ -4,6 +4,7 @@ node_js:
 branchs:
   only:
   - master
+install: true
 script: true
 after_success:
 - ssh -p 22 root@39.106.211.6
