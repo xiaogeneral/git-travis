@@ -5,8 +5,10 @@ branchs:
   only:
   - master
 script: true
-
 after_success:
-  - ssh -p 22 root@39.106.211.6 "./script/deploy.sh"
+- ssh -p 22 root@39.106.211.6 "./script/deploy.sh"
 addons:
   ssh_known_hosts: 39.106.211.6
+before_install:
+- openssl aes-256-cbc -K $encrypted_176a6be76290_key -iv $encrypted_176a6be76290_iv
+  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
