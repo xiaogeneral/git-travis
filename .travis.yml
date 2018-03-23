@@ -6,9 +6,6 @@ branchs:
   - master
 install: true
 script: true
-env:
-  global:
-    secure: *********
 after_success:
 - chmod 600 ~/.ssh/id_rsa
 - ssh root@39.106.211.6 -o StrictHostKeyChecking=no '/data/apps/front/git-travis/script/deploy.sh'
