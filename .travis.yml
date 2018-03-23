@@ -6,7 +6,7 @@ branchs:
   - master
 script: true
 after_success:
-- ssh -p 22 root@39.106.211.6 '/data/apps/front/git-travis/script/deploy.sh'
+- ssh -p 22 root@39.106.211.6
 addons:
   ssh_known_hosts: 39.106.211.6
 before_install:
